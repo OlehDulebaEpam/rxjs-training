@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RxJs examine</title>
+
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+
+<h1>Shuttle Race</h1>
+
+<div class="races">
+    <section class="race" data-type="merge">
+        <div class="title">
+            mergeMap
+        </div>
+
+        <div class="description">
+            Every race participant can run the whole lap and finish it!
+        </div>
+    </section>
+
+    <section class="race" data-type="concat">
+        <div class="title">
+            concatMap
+        </div>
+
+        <div class="description">
+            Every participant must wait his turn and gets in line.
+        </div>
+    </section>
+
+    <section class="race" data-type="switch">
+        <div class="title">
+            switchMap
+        </div>
+
+        <div class="description">
+            Every next participant kills the achievements of the previous one.
+        </div>
+    </section>
+
+    <section class="race" data-type="exhaust">
+        <div class="title">
+            exhaustMap
+        </div>
+
+        <div class="description">
+            Only first participant of every race runs. Following races are ignored until the current finishes.
+        </div>
+    </section>
+</div>
+
+
+<div class="actions">
+    <div class="btn-wrap">
+        <button data-type="merge">Merge</button>
+    </div>
+
+    <div class="btn-wrap">
+        <button data-type="concat">Concat</button>
+    </div>
+
+    <div class="btn-wrap">
+        <button data-type="switch">Switch</button>
+    </div>
+
+    <div class="btn-wrap">
+        <button data-type="exhaust">Exhaust</button>
+    </div>
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>

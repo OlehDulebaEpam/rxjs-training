@@ -1,0 +1,65 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column; }
+
+h1 {
+  color: #363636;
+  text-align: center; }
+
+.races {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column; }
+  .races .race {
+    max-width: 100%;
+    overflow-x: hidden;
+    flex: 1 1 auto;
+    position: relative;
+    border: 1px dashed #cdcdcd;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .races .race .title {
+      font-size: 1.5em;
+      line-height: 1.5; }
+    .races .race .description {
+      color: #535d6b;
+      line-height: 1.5; }
+  .races .car {
+    top: 0;
+    height: 100%;
+    left: 0;
+    animation: 2s ease-out 0s infinite backwards tesla; }
+
+.actions {
+  display: flex;
+  justify-content: space-around; }
+  .actions button {
+    background: none;
+    border: 2px solid #cee7f7;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #363636; }
+
+.car {
+  position: absolute; }
+
+.active-track {
+  background-color: #bfbbbb; }
+
+@keyframes tesla {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
+
