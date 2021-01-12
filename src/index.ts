@@ -17,6 +17,11 @@ const car = (section: HTMLElement) => {
     track.src = Math.random() > 0.5 ? './unnamed.png' : './unnamed2.png';
 
     return of(track).pipe(
+        tap(() => {
+            const sound = Math.random() > 0.5 ? './VEHHorn_Recent car horn 2 (ID 0258)_BSB.wav' : './VEHHorn_Old car horn 3 (ID 0256)_BSB.wav';
+
+            new Audio(sound).play();
+        }),
         tap((track: HTMLElement) => {
             section.appendChild(track);
         }),
